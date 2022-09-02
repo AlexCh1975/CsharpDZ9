@@ -34,24 +34,24 @@ else
 
 int[] arrayNumber = new int[n - m +1];
 
-arrayNumber = GetStringNumber(n, m, arrayNumber);
+arrayNumber = GetArrayNumber(n, m, arrayNumber);
 
-PrintStringNumber(arrayNumber, numberN, numberM);
+PrintArrayNumber(arrayNumber, numberN, numberM);
 
 
-int[] GetStringNumber(int numberN, int numberM, int[] arrayNumber, int i = 0)
+int[] GetArrayNumber(int numberN, int numberM, int[] arrayNumber, int i = 0)
 {  
     if(numberM <= numberN) 
     {
         arrayNumber[i] = numberN;
         numberN--;
         i++;
-        return GetStringNumber(numberN, numberM, arrayNumber, i);
+        return GetArrayNumber(numberN, numberM, arrayNumber, i);
     }
      return arrayNumber;
 }
 
-void PrintStringNumber(int[] arrayNumber, int numberN, int numberM)
+void PrintArrayNumber(int[] arrayNumber, int numberN, int numberM)
 {
     Console.ForegroundColor = ConsoleColor.Green;
     Console.Write($"M = {numberM}; N = {numberN} -> \" ");
