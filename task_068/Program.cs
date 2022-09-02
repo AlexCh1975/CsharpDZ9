@@ -4,7 +4,7 @@
     m = 2, n = 3 -> A(m,n) = 29
 */
 
-//Console.Clear();
+Console.Clear();
 
 Console.Write("Введите число m: ");
 int m = Convert.ToInt32(Console.ReadLine());
@@ -15,9 +15,8 @@ int n = Convert.ToInt32(Console.ReadLine());
 int result = AckermanFunction(m, n);
 PrintResult(result);
 
-int AckermanFunction(int m, int n, int i = 0)
+int AckermanFunction(int m, int n)
 {
-    i++;
     if (m > 0 && n == 0)
     {
         return AckermanFunction(m - 1, 1);
